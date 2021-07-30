@@ -1,3 +1,37 @@
+
+Raspberry PI - Realtime Kernel
+==============================
+
+I intergrated a compatible rt-kernel.patch with the respective RPi foundation kernel.
+Not all rt-patches are compatible with RPi foundation kernels. 
+
+Before compiling the kernel and after initializing one of the default RPi configs a 
+
+make oldconfig 
+
+must be run to introduce the rt-patch specfic parameters to the config.
+
+Keep in mind. The default rt config needs some parameter adjustments to make
+the realtime features avialable. Without running a
+
+make menuconfig 
+
+session, these sources will be useless!
+
+
+NOTE: 
+I can not promise and will not promise that the sources a working properly. I am just using
+a very limited fragment of the kernel space. I won't be giving any support for this package.  
+I do use the same sources on my own RPi4. They are working, at least in my enviroment.
+
+From time to time I plan to update the sources.
+
+Enjoy.
+
+===========
+
+Below, the original Readme
+
 Linux kernel
 ============
 
@@ -16,3 +50,4 @@ several of them using the Restructured Text markup notation.
 Please read the Documentation/process/changes.rst file, as it contains the
 requirements for building and running the kernel, and information about
 the problems which may result by upgrading your kernel.
+
